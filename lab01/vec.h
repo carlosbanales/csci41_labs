@@ -17,4 +17,4 @@ private:
   int capacity;
 };
 
-#endif /* VEC_H */
+#endif
