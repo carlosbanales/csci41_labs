@@ -8,4 +8,4 @@ int main() {
   cout << greeting << endl;
 
   return 0;
-}
+} //-_-
