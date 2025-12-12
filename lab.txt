@@ -1,0 +1,40 @@
+
+struct Node {
+    int data;
+    Node* next;
+};
+
+int count(Node* head, int val) {
+    int cnt = 0;
+    Node* curr = head;
+
+    // Traverse the list
+    while (curr != nullptr) {
+        if (curr->data == val) {
+            cnt++;
+        }
+        curr = curr->next;
+    }
+
+    return cnt;
+}
+
+// queue are first in first in first out and have operations enqueue and dequeue, people in line
+
+// stacks are first in last out with operations like push and pop,
+// used for ex returning to previous tabs.
+
+void testCountLeaves() {
+    TreeNode* root = new TreeNode{10, nullptr, nullptr};
+    root->left      = new TreeNode{5, nullptr, nullptr};
+
+    int result = countLeaves(root);
+
+    // Correct answer should be 1 leaf (the node with data 5)
+    assertTrue(result == 1, "Tree with one internal node and one leaf has 1 leaf");
+}
+
+Max heap - a binary heap  with heap order property structually like a binary tree, all levels 
+filled exc mabye last, last level is filled left to right, for every node  its key is greater
+than or equal to the keys of its children max element is always at root where in min heap the
+smallest element is in thew root 
